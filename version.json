@@ -1,0 +1,8 @@
+{
+  "versionCode": 100,
+  "versionName": "1.0.0",
+  "apkUrl": "https://github.com/gnews-solutions/sariscan-portal/releases/latest/download/SariScan-Mobile-Latest.apk",
+  "releaseNotes": "SariScan Mobile v1.0.0 — Offline AI Shelf Scanner & Instant Inventory Exporter.\n• 100% Offline YOLOv8 + MLKit OCR Engine\n• Sub-millisecond SQLite FTS5 Search\n• Excel (.XLSX), CSV, and JSON Export\n• In-App OTA Auto-Updater Engine",
+  "minSupportVersionCode": 1,
+  "sha256": ""
+}

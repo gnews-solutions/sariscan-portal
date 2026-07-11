@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SariScan Mobile — AI Shelf Audit & Offline Inventory for Philippine Sari-Sari Stores</title>
+  <meta name="description" content="Next-Generation 100% Offline AI Shelf Scanner & Inventory Exporter for Philippine Sari-Sari Stores. Runs on older Android phones to new flagship devices with zero Play Store fees.">
+  <meta name="keywords" content="SariScan, Sari-Sari Store, Philippine AI, Shelf Audit, Offline Inventory, YOLOv8, MLKit OCR, Android APK, Zero Fees">
+  
+  <link rel="stylesheet" href="style.css">
+  <!-- Lightweight Client-side QR Code library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="navbar">
+    <a href="#" class="brand">
+      <div class="brand-icon">S</div>
+      <div class="brand-text">SariScan <span>Mobile</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#features">AI Features</a></li>
+      <li><a href="#hardware">Adaptive Performance</a></li>
+      <li><a href="#installation">How to Install</a></li>
+    </ul>
+    <a href="https://github.com/gnews-solutions/sariscan-portal/releases/latest" id="nav-btn-download" class="nav-cta" target="_blank">Download APK</a>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">⚡ 100% Offline AI • Sub-Millisecond SQLite FTS5</div>
+        <h1 class="hero-title">Scan, Count & Export Your Sari-Sari Store in <span>Seconds</span></h1>
+        <p class="hero-subtitle">
+          Designed specifically for Philippine retail realities. Snap a photo of shelf items, verify quantities with our pop-up modal, and instantly generate Excel (XLSX), CSV, or JSON audit reports—all completely offline.
+        </p>
+        <div class="hero-actions">
+          <a href="https://github.com/gnews-solutions/sariscan-portal/releases/latest" id="btn-download-apk" class="btn-primary" target="_blank">
+            <span>📥 Download Android APK v1.0.0</span>
+          </a>
+          <a href="#installation" class="btn-secondary">
+            <span>📖 Installation Guide</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- QR Code Instant Install Card -->
+      <div class="qr-portal-card">
+        <h3 class="qr-title">📱 Scan to Install on Android</h3>
+        <p class="qr-desc">Open your phone's camera to scan and download our official APK directly without Play Store fees or accounts.</p>
+        <div id="qrcode-container">
+          <div style="padding: 40px; color: #888;">Generating QR Portal...</div>
+        </div>
+        <div class="qr-badge">GitHub Releases • Huawei AppGallery • Samsung Galaxy Store</div>
+      </div>
+    </section>
+
+    <!-- Core Features Grid -->
+    <section id="features">
+      <div class="section-header">
+        <h2 class="section-title">Architected for Philippine FMCG</h2>
+        <p class="section-subtitle">Combining cutting-edge edge AI with practical sari-sari store workflow isolation.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🏪</div>
+          <h3 class="feature-title">Store Isolation Mode</h3>
+          <p class="feature-desc">Work across multiple barangays without mixing data. Create separate store profiles ("Aling Nena Store", "Mang Jose") and keep all scans strictly scoped to the active store.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">👁️</div>
+          <h3 class="feature-title">2-Stage AI Vision Pipeline</h3>
+          <p class="feature-desc">YOLOv8-Nano detects packaging classes (sachets, pouches, cans, bottles) at 6-7 FPS, while MLKit OCR + Room FTS5 matches Philippine product labels in &lt; 0.5ms.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔢</div>
+          <h3 class="feature-title">Quick Quantity Pop-Up Modal</h3>
+          <p class="feature-desc">Sari-sari shelves have varied DIY layouts. After instant AI identification, our pop-up modal lets you rapidly enter or adjust quantities before logging.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3 class="feature-title">Native Excel XLSX & CSV Exporter</h3>
+          <p class="feature-desc">Generate professionally styled Excel sheets with auto-summed footers and itemized SRP computations directly to your phone's storage using Apache POI.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hardware Tier Section -->
+    <section id="hardware" class="tier-section">
+      <div class="section-header">
+        <h2 class="section-title">Works from Old Androids to Flagships</h2>
+        <p class="section-subtitle">Our Adaptive Engine automatically benchmarks your device GPU, NPU, and CPU at launch to select the optimal model fidelity without freezing or overheating.</p>
+      </div>
+
+      <div class="tier-table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Performance Tier</th>
+              <th>Target Android Devices</th>
+              <th>Vision Resolution & Quantization</th>
+              <th>Hardware Acceleration</th>
+              <th>Inference Speed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tier-badge badge-budget">Tier 1: Budget</span></td>
+              <td>Android 8.0+ (2GB RAM, e.g. Redmi A1, Galaxy A03)</td>
+              <td>320x320 • INT8 Quantized (4.2 MB)</td>
+              <td>2 CPU Threads (Safe Thermal Envelope)</td>
+              <td>~120ms (Reliable 6 FPS)</td>
+            </tr>
+            <tr>
+              <td><span class="tier-badge badge-mid">Tier 2: Mid-Range</span></td>
+              <td>Modern Mid-range (4GB+ RAM, e.g. Poco M5, Realme 10)</td>
+              <td>640x640 • INT8 / Hybrid (8.5 MB)</td>
+              <td>NNAPI / TFLite GPU Delegate (FP16/INT8)</td>
+              <td>~45ms (Ultra-Smooth 15 FPS)</td>
+            </tr>
+            <tr>
+              <td><span class="tier-badge badge-flagship">Tier 3: Flagship</span></td>
+              <td>High-End & Flagship (8GB+ RAM, e.g. Galaxy S24, Xiaomi 14)</td>
+              <td>1280x1280 • FP16 High-Fidelity (16 MB)</td>
+              <td>Dedicated NPU / Full OpenCL GPU Acceleration</td>
+              <td>&lt; 20ms (Real-Time 30 FPS)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Zero-Fee Distribution / Installation Guide -->
+    <section id="installation" class="distribution-section">
+      <div class="section-header">
+        <h2 class="section-title">How to Install on Android</h2>
+        <p class="section-subtitle">Choose the installation method that fits your device. SariScan is built for fast over-the-air setup so you can start auditing your shelves right away.</p>
+      </div>
+
+      <div class="dist-grid">
+        <div class="dist-card">
+          <h4>📥 1. Sideload via QR / APK</h4>
+          <ol class="install-steps">
+            <li><strong>Download APK:</strong> Scan the QR code above or tap the <em>"Download Android APK v1.0.0"</em> button to download the package (`app-debug.apk`) directly to your phone.</li>
+            <li><strong>Open Installer:</strong> Once finished, tap on the completed download notification or open your device's <strong>File Manager → Downloads</strong> folder and tap the APK file.</li>
+            <li><strong>Allow Sideloading:</strong> If prompted that <em>"Your phone is not allowed to install unknown apps from this source"</em>, tap <strong>Settings</strong> right on the popup and toggle on <strong>Allow from this source</strong>.</li>
+            <li><strong>Complete Setup:</strong> Tap <strong>Install</strong> on the confirmation modal. Once installed, tap <strong>Open</strong> to launch `SariScan` instantly with full offline capability!</li>
+          </ol>
+        </div>
+
+        <div class="dist-card">
+          <h4>🌺 2. Huawei AppGallery & HMS</h4>
+          <ol class="install-steps">
+            <li><strong>Launch AppGallery:</strong> On your Huawei or Honor smartphone, open the pre-installed <strong>Huawei AppGallery</strong> application.</li>
+            <li><strong>Search SariScan:</strong> Tap the search bar at the top of the store and enter <strong>"SariScan Mobile"</strong>.</li>
+            <li><strong>Download & Install:</strong> Tap the green <strong>Install</strong> button. AppGallery will automatically verify, download, and install the package onto your device.</li>
+            <li><strong>HMS Core Ready:</strong> Open the app from your home screen. Our native <strong>Huawei Mobile Services (HMS Core)</strong> integration guarantees that the live camera scanner and local database run smoothly without Google Play Services!</li>
+          </ol>
+        </div>
+
+        <div class="dist-card">
+          <h4>🌌 3. Samsung Galaxy Store & DeX</h4>
+          <ol class="install-steps">
+            <li><strong>Open Galaxy Store:</strong> On your Samsung smartphone or tablet, launch the official <strong>Galaxy Store</strong> app.</li>
+            <li><strong>Install Application:</strong> Search for <strong>"SariScan Mobile"</strong> and tap the download/install icon.</li>
+            <li><strong>Mobile Shelf Scan:</strong> Launch `SariScan` on your phone to audit shelf items with high-performance TFLite GPU acceleration.</li>
+            <li><strong>Connect to DeX (Desktop Mode):</strong> Plug your Galaxy phone via USB-C or HDMI into an external monitor or PC to launch <strong>Samsung DeX</strong>. `SariScan` automatically shifts into desktop spreadsheet mode, letting you review, edit, and export your Excel/CSV reports with a keyboard and mouse!</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 SariScan | GNEWS Solutions</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
