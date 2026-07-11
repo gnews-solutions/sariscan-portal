@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log("SariScan Landing Portal Initialized.");
 
   // 1. Dynamic QR Code Generation pointing directly to GitHub Releases Latest APK
-  const apkDownloadUrl = "https://github.com/gnews-solutions/sariscan-portal/releases/latest";
+  const apkDownloadUrl = "https://github.com/gnews-solutions/sariscan-portal/releases/latest/download/SariScan-Mobile-Latest.apk";
   const qrContainer = document.getElementById('qrcode-container');
 
   if (qrContainer && typeof QRCode !== 'undefined') {
