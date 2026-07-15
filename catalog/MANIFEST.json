@@ -1,0 +1,153 @@
+{
+  "catalog_version": "2026.07.13.2",
+  "schema_version": 2,
+  "built_at_utc": "2026-07-13T05:44:02Z",
+  "offline_policy": {
+    "scan_match_quantity_export_local": true,
+    "network_required_for": [
+      "optional_share_via_messaging_apps",
+      "app_apk_update",
+      "extended_catalog_download",
+      "core_catalog_upgrade"
+    ],
+    "default_preinstalled_pack": "core"
+  },
+  "packs": {
+    "core": {
+      "description": "Full high-velocity Philippine sari-sari universe (curated Pareto + pilot brands + OSINT/seed merges). Pre-installed offline in the APK.",
+      "file_db": "ph_catalog_core.db",
+      "file_json": "ph_catalog_core.json",
+      "record_count": 860,
+      "sha256_db": "e48787383ed1e25f759c4981db38ed51f62527dc8307cffbc5b50b64ffd6c8e0",
+      "size_bytes": 737280,
+      "install": "bundled",
+      "download_url": "https://gnews-solutions.github.io/sariscan-portal/catalog/ph_catalog_core.json",
+      "download_url_db": "https://gnews-solutions.github.io/sariscan-portal/catalog/ph_catalog_core.db"
+    },
+    "extended": {
+      "description": "Brand × category long-tail (extra sizes, flavors, line extensions). Optional install; expandable per category/brand over time.",
+      "file_db": "ph_catalog_extended.db",
+      "file_json": "ph_catalog_extended.json",
+      "record_count": 841,
+      "sha256_db": "5432abda1cf979c774f98d13e15b233f1b1ee99e269d901a02490b6c672c390e",
+      "size_bytes": 737280,
+      "install": "optional_download",
+      "axes": [
+        "master_category",
+        "brand",
+        "size",
+        "variant"
+      ],
+      "download_url": "https://gnews-solutions.github.io/sariscan-portal/catalog/ph_catalog_extended.json",
+      "download_url_db": "https://gnews-solutions.github.io/sariscan-portal/catalog/ph_catalog_extended.db"
+    }
+  },
+  "tier_summary": {
+    "core_total": 860,
+    "extended_total": 841,
+    "universe_total": 1701,
+    "per_category": {
+      "Beverages": {
+        "total": 292,
+        "core": 76,
+        "extended": 216,
+        "core_pct": 26.0,
+        "curated_pareto": 45,
+        "longtail": 216
+      },
+      "Instant Foods": {
+        "total": 114,
+        "core": 36,
+        "extended": 78,
+        "core_pct": 31.6,
+        "curated_pareto": 22,
+        "longtail": 78
+      },
+      "Canned Goods": {
+        "total": 135,
+        "core": 56,
+        "extended": 79,
+        "core_pct": 41.5,
+        "curated_pareto": 28,
+        "longtail": 79
+      },
+      "Condiments & Sauces": {
+        "total": 134,
+        "core": 55,
+        "extended": 79,
+        "core_pct": 41.0,
+        "curated_pareto": 32,
+        "longtail": 79
+      },
+      "Candies & Sweets": {
+        "total": 72,
+        "core": 29,
+        "extended": 43,
+        "core_pct": 40.3,
+        "curated_pareto": 24,
+        "longtail": 43
+      },
+      "Snacks & Goods": {
+        "total": 107,
+        "core": 61,
+        "extended": 46,
+        "core_pct": 57.0,
+        "curated_pareto": 41,
+        "longtail": 46
+      },
+      "Bakery & Dairy": {
+        "total": 108,
+        "core": 51,
+        "extended": 57,
+        "core_pct": 47.2,
+        "curated_pareto": 28,
+        "longtail": 57
+      },
+      "Personal Care & Home": {
+        "total": 331,
+        "core": 112,
+        "extended": 219,
+        "core_pct": 33.8,
+        "curated_pareto": 45,
+        "longtail": 219
+      },
+      "Cigarettes & Tobacco": {
+        "total": 32,
+        "core": 20,
+        "extended": 12,
+        "core_pct": 62.5,
+        "curated_pareto": 16,
+        "longtail": 12
+      },
+      "School & Office Supplies": {
+        "total": 35,
+        "core": 23,
+        "extended": 12,
+        "core_pct": 65.7,
+        "curated_pareto": 21,
+        "longtail": 12
+      },
+      "Miscellaneous": {
+        "total": 341,
+        "core": 341,
+        "extended": 0,
+        "core_pct": 100.0,
+        "curated_pareto": 24,
+        "longtail": 0
+      }
+    },
+    "policy": {
+      "principle": "Core = full high-velocity PH sari-sari universe (pre-install); Extended = brand×category long-tail (optional)",
+      "core_fraction_target": 1.0,
+      "min_core_per_category": 8,
+      "curated_pareto_always_core": true,
+      "longtail_is_extended_only": true
+    },
+    "pilot": {
+      "required": 80,
+      "in_core": 80,
+      "missing_from_data": 0
+    }
+  },
+  "min_app_version_code": 103
+}
