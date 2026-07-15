@@ -5,5 +5,5 @@
   "releaseNotes": "SariScan Mobile v1.0.3 (Latest Release) — Offline AI Shelf Scanner & Instant Inventory Exporter.\n• Always-Active Full-Frame OCR Resolution fallback on Snap & Audit\n• Multi-Tier FTS5 Keyword Matching (561+ Philippine Master Catalog Items)\n• 100% Offline YOLOv8 + MLKit OCR Engine\n• Sub-millisecond SQLite FTS5 Search\n• In-App OTA Auto-Updater Engine",
   "minSupportVersionCode": 1,
   "sha256": "",
-  "catalog_version": "2026.07.13.2"
+  "catalog_version": "2026.07.15.2"
 }

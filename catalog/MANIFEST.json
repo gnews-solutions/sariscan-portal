@@ -1,31 +1,41 @@
 {
-  "catalog_version": "2026.07.13.2",
-  "schema_version": 2,
-  "built_at_utc": "2026-07-13T05:44:02Z",
+  "catalog_version": "2026.07.15.2",
+  "schema_version": 3,
+  "built_at_utc": "2026-07-15T09:52:19Z",
   "offline_policy": {
     "scan_match_quantity_export_local": true,
     "network_required_for": [
       "optional_share_via_messaging_apps",
       "app_apk_update",
       "extended_catalog_download",
+      "category_pack_download",
       "core_catalog_upgrade"
     ],
     "default_preinstalled_pack": "core"
   },
+  "pack_kinds": [
+    "core",
+    "extended",
+    "category"
+  ],
   "packs": {
     "core": {
+      "pack_id": "core",
+      "pack_kind": "core",
       "description": "Full high-velocity Philippine sari-sari universe (curated Pareto + pilot brands + OSINT/seed merges). Pre-installed offline in the APK.",
       "file_db": "ph_catalog_core.db",
       "file_json": "ph_catalog_core.json",
       "record_count": 860,
-      "sha256_db": "e48787383ed1e25f759c4981db38ed51f62527dc8307cffbc5b50b64ffd6c8e0",
+      "sha256_db": "8cd03c1503a0f31c87464ea67be2d680cee66c54a88e182b2eb770a56a67ccb2",
       "size_bytes": 737280,
       "install": "bundled",
       "download_url": "https://gnews-solutions.github.io/sariscan-portal/catalog/ph_catalog_core.json",
       "download_url_db": "https://gnews-solutions.github.io/sariscan-portal/catalog/ph_catalog_core.db"
     },
     "extended": {
-      "description": "Brand × category long-tail (extra sizes, flavors, line extensions). Optional install; expandable per category/brand over time.",
+      "pack_id": "extended",
+      "pack_kind": "extended",
+      "description": "Brand × category long-tail (all categories). Optional install; prefer per-category cat_* packs when available.",
       "file_db": "ph_catalog_extended.db",
       "file_json": "ph_catalog_extended.json",
       "record_count": 841,
@@ -40,8 +50,219 @@
       ],
       "download_url": "https://gnews-solutions.github.io/sariscan-portal/catalog/ph_catalog_extended.json",
       "download_url_db": "https://gnews-solutions.github.io/sariscan-portal/catalog/ph_catalog_extended.db"
+    },
+    "cat_beverages": {
+      "pack_id": "cat_beverages",
+      "pack_kind": "category",
+      "master_category": "Beverages",
+      "description": "Optional long-tail SKUs for master category «Beverages». Install once on the phone; all stores can use them (ADR-004).",
+      "file_db": "packs/cat_beverages.db",
+      "file_json": "packs/cat_beverages.json",
+      "record_count": 216,
+      "sha256_db": "eb2e8b70cd9341e4a63616afff397ecdc3626756a73ddc19816441aa3802a826",
+      "sha256_json": "6cefdc5ca13149f71ef43165830daf2ad10b041944987266a797058cdf0e1571",
+      "size_bytes": 237568,
+      "install": "optional",
+      "depends_on": [
+        "core"
+      ],
+      "download_url": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_beverages.json",
+      "download_url_db": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_beverages.db"
+    },
+    "cat_instant_foods": {
+      "pack_id": "cat_instant_foods",
+      "pack_kind": "category",
+      "master_category": "Instant Foods",
+      "description": "Optional long-tail SKUs for master category «Instant Foods». Install once on the phone; all stores can use them (ADR-004).",
+      "file_db": "packs/cat_instant_foods.db",
+      "file_json": "packs/cat_instant_foods.json",
+      "record_count": 78,
+      "sha256_db": "32243c7680b22220c7c8ebd9e886d434ea34fa65d7a37517772ad15deae89cf1",
+      "sha256_json": "56596a5ca20ddeee210609f1b67abbbe6ec2925e8eb05641155fa20b74d17b33",
+      "size_bytes": 139264,
+      "install": "optional",
+      "depends_on": [
+        "core"
+      ],
+      "download_url": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_instant_foods.json",
+      "download_url_db": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_instant_foods.db"
+    },
+    "cat_canned_goods": {
+      "pack_id": "cat_canned_goods",
+      "pack_kind": "category",
+      "master_category": "Canned Goods",
+      "description": "Optional long-tail SKUs for master category «Canned Goods». Install once on the phone; all stores can use them (ADR-004).",
+      "file_db": "packs/cat_canned_goods.db",
+      "file_json": "packs/cat_canned_goods.json",
+      "record_count": 79,
+      "sha256_db": "a8fd835107b7499b95793f7ffb2ee0581bf9610eeb2ae8c040055f57a7befbc4",
+      "sha256_json": "c3c3d94efc3367b42716eb7c15f58e4b1a92eedbcf96a69e8c4f37ba6e5f4c77",
+      "size_bytes": 139264,
+      "install": "optional",
+      "depends_on": [
+        "core"
+      ],
+      "download_url": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_canned_goods.json",
+      "download_url_db": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_canned_goods.db"
+    },
+    "cat_condiments_sauces": {
+      "pack_id": "cat_condiments_sauces",
+      "pack_kind": "category",
+      "master_category": "Condiments & Sauces",
+      "description": "Optional long-tail SKUs for master category «Condiments & Sauces». Install once on the phone; all stores can use them (ADR-004).",
+      "file_db": "packs/cat_condiments_sauces.db",
+      "file_json": "packs/cat_condiments_sauces.json",
+      "record_count": 79,
+      "sha256_db": "88eb864b4e641f0dc66897b26caa5a6aed06f09dfe445bfcc325c6e50c39614d",
+      "sha256_json": "1f233cd433cfeec996fd3341537808e4c7900452ca43d1d98761f01e3d877de7",
+      "size_bytes": 143360,
+      "install": "optional",
+      "depends_on": [
+        "core"
+      ],
+      "download_url": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_condiments_sauces.json",
+      "download_url_db": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_condiments_sauces.db"
+    },
+    "cat_candies_sweets": {
+      "pack_id": "cat_candies_sweets",
+      "pack_kind": "category",
+      "master_category": "Candies & Sweets",
+      "description": "Optional long-tail SKUs for master category «Candies & Sweets». Install once on the phone; all stores can use them (ADR-004).",
+      "file_db": "packs/cat_candies_sweets.db",
+      "file_json": "packs/cat_candies_sweets.json",
+      "record_count": 43,
+      "sha256_db": "3a85bf9868245f306c4223a7a75cf1d1ea0b380c145bf5a588d215acd5600bea",
+      "sha256_json": "7c63badf1219e5d1e7dbdc0536f6b04d5b216bf9581541907ac8f861dbd39a28",
+      "size_bytes": 114688,
+      "install": "optional",
+      "depends_on": [
+        "core"
+      ],
+      "download_url": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_candies_sweets.json",
+      "download_url_db": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_candies_sweets.db"
+    },
+    "cat_snacks_goods": {
+      "pack_id": "cat_snacks_goods",
+      "pack_kind": "category",
+      "master_category": "Snacks & Goods",
+      "description": "Optional long-tail SKUs for master category «Snacks & Goods». Install once on the phone; all stores can use them (ADR-004).",
+      "file_db": "packs/cat_snacks_goods.db",
+      "file_json": "packs/cat_snacks_goods.json",
+      "record_count": 46,
+      "sha256_db": "d75ae506d3fa20d531c1463e2cf88ed8e3f0391f6b915438d06062c886c81c0f",
+      "sha256_json": "9daa86ad04a7df9dc0885673008f7975100e4b388486f41124629bd1ac5f46ab",
+      "size_bytes": 114688,
+      "install": "optional",
+      "depends_on": [
+        "core"
+      ],
+      "download_url": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_snacks_goods.json",
+      "download_url_db": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_snacks_goods.db"
+    },
+    "cat_bakery_dairy": {
+      "pack_id": "cat_bakery_dairy",
+      "pack_kind": "category",
+      "master_category": "Bakery & Dairy",
+      "description": "Optional long-tail SKUs for master category «Bakery & Dairy». Install once on the phone; all stores can use them (ADR-004).",
+      "file_db": "packs/cat_bakery_dairy.db",
+      "file_json": "packs/cat_bakery_dairy.json",
+      "record_count": 57,
+      "sha256_db": "85c4ef60e37a66ad88d720c8108162f0ebb134e487fe9fb6f54772290e8dbc14",
+      "sha256_json": "57bbb0399c59492684edb057cb42a266ea286011b2348928242fbb6fe4de4618",
+      "size_bytes": 126976,
+      "install": "optional",
+      "depends_on": [
+        "core"
+      ],
+      "download_url": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_bakery_dairy.json",
+      "download_url_db": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_bakery_dairy.db"
+    },
+    "cat_personal_care_home": {
+      "pack_id": "cat_personal_care_home",
+      "pack_kind": "category",
+      "master_category": "Personal Care & Home",
+      "description": "Optional long-tail SKUs for master category «Personal Care & Home». Install once on the phone; all stores can use them (ADR-004).",
+      "file_db": "packs/cat_personal_care_home.db",
+      "file_json": "packs/cat_personal_care_home.json",
+      "record_count": 219,
+      "sha256_db": "b916d142a5f0877e4a4066e8248a79439a717278aabf036c1d973558c2030478",
+      "sha256_json": "49f2e313be018a7ea49a1d754d36cfb59d54e7c5e283cfe60796a295abef3d6f",
+      "size_bytes": 249856,
+      "install": "optional",
+      "depends_on": [
+        "core"
+      ],
+      "download_url": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_personal_care_home.json",
+      "download_url_db": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_personal_care_home.db"
+    },
+    "cat_cigarettes_tobacco": {
+      "pack_id": "cat_cigarettes_tobacco",
+      "pack_kind": "category",
+      "master_category": "Cigarettes & Tobacco",
+      "description": "Optional long-tail SKUs for master category «Cigarettes & Tobacco». Install once on the phone; all stores can use them (ADR-004).",
+      "file_db": "packs/cat_cigarettes_tobacco.db",
+      "file_json": "packs/cat_cigarettes_tobacco.json",
+      "record_count": 12,
+      "sha256_db": "e324203b88084acc214ce23a3e73def76068bd978ad040869c82144974e6fc00",
+      "sha256_json": "83d9a48e8b240621cf7b9888c97a5c5ec8836f1447b9682184a3934dc87c5ad9",
+      "size_bytes": 90112,
+      "install": "optional",
+      "depends_on": [
+        "core"
+      ],
+      "download_url": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_cigarettes_tobacco.json",
+      "download_url_db": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_cigarettes_tobacco.db"
+    },
+    "cat_school_office_supplies": {
+      "pack_id": "cat_school_office_supplies",
+      "pack_kind": "category",
+      "master_category": "School & Office Supplies",
+      "description": "Optional long-tail SKUs for master category «School & Office Supplies». Install once on the phone; all stores can use them (ADR-004).",
+      "file_db": "packs/cat_school_office_supplies.db",
+      "file_json": "packs/cat_school_office_supplies.json",
+      "record_count": 12,
+      "sha256_db": "8b942ae5a523805e6e2818e9e4d651a91c002a5cc22b1b5a31356dd884e1ae27",
+      "sha256_json": "2724a2f413362ffccb7bd595b6e5206a5a55d7e2becc3fed40eef9a0d1733d0b",
+      "size_bytes": 90112,
+      "install": "optional",
+      "depends_on": [
+        "core"
+      ],
+      "download_url": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_school_office_supplies.json",
+      "download_url_db": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_school_office_supplies.db"
+    },
+    "cat_miscellaneous": {
+      "pack_id": "cat_miscellaneous",
+      "pack_kind": "category",
+      "master_category": "Miscellaneous",
+      "description": "Optional long-tail SKUs for master category «Miscellaneous». Install once on the phone; all stores can use them (ADR-004).",
+      "file_db": "packs/cat_miscellaneous.db",
+      "file_json": "packs/cat_miscellaneous.json",
+      "record_count": 0,
+      "sha256_db": "ed15a648fa91b79fe081ed846fac93b21a7e8f05d359cf281a9272203b736a8f",
+      "sha256_json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "size_bytes": 81920,
+      "install": "optional",
+      "depends_on": [
+        "core"
+      ],
+      "download_url": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_miscellaneous.json",
+      "download_url_db": "https://gnews-solutions.github.io/sariscan-portal/catalog/packs/cat_miscellaneous.db"
     }
   },
+  "category_pack_ids": [
+    "cat_bakery_dairy",
+    "cat_beverages",
+    "cat_candies_sweets",
+    "cat_canned_goods",
+    "cat_cigarettes_tobacco",
+    "cat_condiments_sauces",
+    "cat_instant_foods",
+    "cat_miscellaneous",
+    "cat_personal_care_home",
+    "cat_school_office_supplies",
+    "cat_snacks_goods"
+  ],
   "tier_summary": {
     "core_total": 860,
     "extended_total": 841,
